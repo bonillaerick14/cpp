@@ -5,16 +5,16 @@
 
 using namespace std;
 
-string libros[39][2];
+string libros[39][3];
 
 void cargarLibros() {
     // Arreglo con categoria y descripcion
-	libros[0][0] = "Algoritmos"; libros[0][2] = "Algoritmos y Programacion (Guia para docentes)"; libros[0][1] = "Autor:Pedro";
-	libros[1][0] = "Algoritmos"; libros[1][1] = "Apuntes de Algoritmos y Estructuras de Datos"; libros[1][2] = "Autor: Pedro";
-	libros[2][0] = "Algoritmos"; libros[2][1] = "Breves Notas sobre Analisis de Algoritmos"; libros[2][2] = "Autor: Pedro";
-	libros[3][0] = "Algoritmos"; libros[3][1] = "Fundamentos de Informatica y Programacion"; libros[3][2] = "Autor: Pedro";
-	libros[4][0] = "Algoritmos"; libros[4][1] = "Temas selectos de estructuras de datos"; libros[4][2] = "Autor: Pedro)";
-	libros[5][0] = "Algoritmos"; libros[5][1] = "Teoria sintactico-gramatical de objetos"; libros[5][2] = "Autor: Pedro)";
+	libros[0][0] = "Algoritmos"; libros[0][1] = "Algoritmos y Programacion (Guia para docentes)"; libros[0][2] = "Pedro y Jose";
+	libros[1][0] = "Algoritmos"; libros[1][1] = "Apuntes de Algoritmos y Estructuras de Datos"; libros[1][2] = "Jorge y Alberto";
+	libros[2][0] = "Algoritmos"; libros[2][1] = "Breves Notas sobre Analisis de Algoritmos"; libros[2][2] = "Erick y Josue";
+	libros[3][0] = "Algoritmos"; libros[3][1] = "Fundamentos de Informatica y Programacion"; libros[3][2] = "Maria y Gaspar";
+	libros[4][0] = "Algoritmos"; libros[4][1] = "Temas selectos de estructuras de datos"; libros[4][2] = "Roberto";
+	libros[5][0] = "Algoritmos"; libros[5][1] = "Teoria sintactico-gramatical de objetos"; libros[5][2] = "Alfredo";
 	libros[6][0] = "Base de Datos"; libros[6][1] = "Apuntes de Base de Datos 1"; libros[6][2] = "Autor: Pedro)";
 	libros[7][0] = "Base de Datos"; libros[7][1] = "Base de Datos (2005)"; libros[7][2] = "Autor: Pedro)";
 	libros[8][0] = "Base de Datos"; libros[8][1] = "Base de Datos (2011)"; libros[8][2] = "Autor: Pedro)";
@@ -69,14 +69,20 @@ int main(int argc, char const *argv[])
         // busqueda
         for (int i = 0; i < 39; i++)
         {
-            string libro = libros[i][2];
+            string libro = libros[i][1];
             string libroEnminuscula = libro;
             // transformamos a minuscula los string buscar y libro
             transform(libroEnminuscula.begin(), libroEnminuscula.end(), libroEnminuscula.begin(), ::tolower);
             transform(buscar.begin(), buscar.end(), buscar.begin(), ::tolower);
 
-            if (libroEnminuscula.find(buscar) != string::npos) {
+            string autor = libros[i][2];
+            string autorEnminuscula = autor;
+            transform(autorEnminuscula.begin(), autorEnminuscula.end(), autorEnminuscula.begin(), ::tolower);
+            transform(buscar.begin(), buscar.end(), buscar.begin(), ::tolower);
+
+            if (autorEnminuscula.find(buscar) != string::npos) {
                 cout << "Libro encontrado: " << libro << endl;
+              
 
                 cout << "Tambien te sugerimos estos libros: " << endl;
 
@@ -91,6 +97,27 @@ int main(int argc, char const *argv[])
                 salir = true;
                 break;
             }
+
+
+            if (libroEnminuscula.find(buscar) != string::npos) {
+                cout << "Libro encontrado: " << libro << endl;
+              
+
+                cout << "Tambien te sugerimos estos libros: " << endl;
+
+                int sugerencia1 = rand() % 38 + 1;
+                int sugerencia2 = rand() % 38 + 1;
+                int sugerencia3 = rand() % 38 + 1;
+
+                cout << " Sugerencia 1: " << libros[sugerencia1][1] << endl;
+                cout << " Sugerencia 2: " << libros[sugerencia2][1] << endl;
+                cout << " Sugerencia 3: " << libros[sugerencia3][1] << endl;
+
+                salir = true;
+                break;
+            }
+
+
         }
         
 
