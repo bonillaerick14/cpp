@@ -9,10 +9,10 @@ string libros[39][2];
 
 void cargarLibros() {
     // Arreglo con categoria y descripcion
-	libros[0][0] = "Algoritmos"; libros[0][1] = "Algoritmos y Programacion (Guia para docentes)"; libros[0][2] = "Autor: Pedro)";
-	libros[1][0] = "Algoritmos"; libros[1][1] = "Apuntes de Algoritmos y Estructuras de Datos"; libros[1][2] = "Autor: Pedro)";
-	libros[2][0] = "Algoritmos"; libros[2][1] = "Breves Notas sobre Analisis de Algoritmos"; libros[2][2] = "Autor: Pedro)";
-	libros[3][0] = "Algoritmos"; libros[3][1] = "Fundamentos de Informatica y Programacion"; libros[3][2] = "Autor: Pedro)";
+	libros[0][0] = "Algoritmos"; libros[0][2] = "Algoritmos y Programacion (Guia para docentes)"; libros[0][1] = "Autor:Pedro";
+	libros[1][0] = "Algoritmos"; libros[1][1] = "Apuntes de Algoritmos y Estructuras de Datos"; libros[1][2] = "Autor: Pedro";
+	libros[2][0] = "Algoritmos"; libros[2][1] = "Breves Notas sobre Analisis de Algoritmos"; libros[2][2] = "Autor: Pedro";
+	libros[3][0] = "Algoritmos"; libros[3][1] = "Fundamentos de Informatica y Programacion"; libros[3][2] = "Autor: Pedro";
 	libros[4][0] = "Algoritmos"; libros[4][1] = "Temas selectos de estructuras de datos"; libros[4][2] = "Autor: Pedro)";
 	libros[5][0] = "Algoritmos"; libros[5][1] = "Teoria sintactico-gramatical de objetos"; libros[5][2] = "Autor: Pedro)";
 	libros[6][0] = "Base de Datos"; libros[6][1] = "Apuntes de Base de Datos 1"; libros[6][2] = "Autor: Pedro)";
@@ -63,13 +63,13 @@ int main(int argc, char const *argv[])
     {
         string buscar = "";
         system("cls");
-        cout << "Ingrese la descripcion del libro que busca: ";
+        cout << "Ingrese la descripcion del libro que busca o el autor: ";
         cin >> buscar;
 
         // busqueda
         for (int i = 0; i < 39; i++)
         {
-            string libro = libros[i][1];
+            string libro = libros[i][2];
             string libroEnminuscula = libro;
             // transformamos a minuscula los string buscar y libro
             transform(libroEnminuscula.begin(), libroEnminuscula.end(), libroEnminuscula.begin(), ::tolower);
