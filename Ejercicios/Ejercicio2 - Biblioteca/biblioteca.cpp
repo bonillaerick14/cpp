@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
     {
         string buscar = "";
         system("cls");
-        cout << "Ingrese la descripcion del libro que busca o elnombre del autor: ";
+        cout << "Ingrese la descripcion del libro que busca o el nombre del autor: ";
         cin >> buscar;
 
         // busqueda
