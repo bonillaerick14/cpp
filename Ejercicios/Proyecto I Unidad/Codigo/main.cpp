@@ -8,8 +8,25 @@ int main(int argc, char const *argv[])
 {
     system("cls");
 
-    //starShip();
-    snake();
+    int opt;
+   cout << "Juegos: ";
+   cout << "Selecione: ";
+    cin >> opt;
+
+    switch (opt)
+    {
+    case (1):
+         starShip();
+        break;
+        
+    case (2):
+     snake();
+     default:
+
+        break;
+    }
+   
+    
 
     return 0;
 
