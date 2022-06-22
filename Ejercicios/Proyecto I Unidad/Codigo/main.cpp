@@ -4,12 +4,18 @@
 
 using namespace std;
 
+void juegos()
+{
+cout << "***************";
+cout << "Menu de Juegos";
+cout << "***************";
+}
 int main(int argc, char const *argv[])
 {
     system("cls");
 
     int opt;
-   cout << "Juegos: ";
+   
    cout << "Selecione: ";
     cin >> opt;
 
