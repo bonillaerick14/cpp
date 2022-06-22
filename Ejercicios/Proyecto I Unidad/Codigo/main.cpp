@@ -4,20 +4,26 @@
 
 using namespace std;
 
-int main(int argc, char const *argv[])
+int opt;
+void juegos()
 {
-    
-    system("cls");
-    
-   int opt;
+   
    cout << "***************" << endl;
    cout << "Menu de Juegos" << endl;
    cout << "***************" << endl; 
 
-   cout << "StarShip" << endl;
-   cout << "Snake" << endl;
+   cout << "1  -  StarShip" << endl;
+   cout << "2  -  Snake" << endl;
    cout << "Ingrese un numero del menu para seleccionar un juego:" << endl;
    cin >> opt;
+}
+int main(int argc, char const *argv[])
+{
+    
+   system("cls");
+    
+   juegos();
+  
 
     switch (opt)
     {
@@ -32,9 +38,7 @@ int main(int argc, char const *argv[])
         break;
     }
    
-    
-     
-    return 0;
+     return 0;
 
 
 }
