@@ -3,22 +3,21 @@
 #include "snake.h"
 
 using namespace std;
-void juegos()
-{
-cout << "***************";
-cout << "Menu de Juegos";
-cout << "***************";
 
-}
 int main(int argc, char const *argv[])
 {
-    juegos();
+    
     system("cls");
     
-    int opt;
-       
-   cout << "Selecione: ";
-    cin >> opt;
+   int opt;
+   cout << "***************" << endl;
+   cout << "Menu de Juegos" << endl;
+   cout << "***************" << endl; 
+
+   cout << "StarShip" << endl;
+   cout << "Snake" << endl;
+   cout << "Ingrese un numero del menu para seleccionar un juego:" << endl;
+   cin >> opt;
 
     switch (opt)
     {
@@ -34,7 +33,7 @@ int main(int argc, char const *argv[])
     }
    
     
-
+     
     return 0;
 
 
