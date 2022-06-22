@@ -8,16 +8,15 @@ void juegos()
 cout << "***************";
 cout << "Menu de Juegos";
 cout << "***************";
-juegos();
-}
 
+}
 int main(int argc, char const *argv[])
 {
+    juegos();
     system("cls");
-
-    int opt;
     
-   
+    int opt;
+       
    cout << "Selecione: ";
     cin >> opt;
 
