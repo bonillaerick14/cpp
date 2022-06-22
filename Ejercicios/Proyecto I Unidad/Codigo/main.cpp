@@ -3,18 +3,20 @@
 #include "snake.h"
 
 using namespace std;
-
 void juegos()
 {
 cout << "***************";
 cout << "Menu de Juegos";
 cout << "***************";
+juegos();
 }
+
 int main(int argc, char const *argv[])
 {
     system("cls");
 
     int opt;
+    
    
    cout << "Selecione: ";
     cin >> opt;
