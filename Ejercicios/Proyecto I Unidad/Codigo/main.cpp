@@ -27,13 +27,13 @@ int main(int argc, char const *argv[])
 
    switch (opt) {
     case (1):
-        starShip();
-        break;        
+      starShip();
+      break;        
     case (2):
-     snake();
-     default:
-   cout << "No selecciono una de los juegos" << endl;
-        break;
+      snake();
+      default:
+    cout << "No selecciono uno de los juegos" << endl;
+    break;
     }
    
      return 0;
